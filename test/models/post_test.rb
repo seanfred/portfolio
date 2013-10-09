@@ -6,6 +6,6 @@ describe Post do
   end
 
   it "must be valid" do
-    @post.valid?.must_equal true
+    @post.valid?.must_equal false
   end
 end
