@@ -5,11 +5,14 @@ gem 'rails', '3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 group :development, :test do
-  gem "minitest-rails"
+  gem 'sqlite3', 'minitest-rails'
 end
+
+group :production do
+  gem 'pg'
+end
+
 
 group :test do
   gem "minitest-rails-capybara"
@@ -49,3 +52,7 @@ gem 'turn'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails-bootstrap'
 gem 'therubyracer'
+gem 'bootstrap-sass'
+
+
+gem 'rails_12factor', group: :production

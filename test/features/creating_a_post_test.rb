@@ -5,7 +5,7 @@ feature "Creating a Post" do
     #Given a completed new post form
     visit new_post_path
     fill_in "Title", with: posts(:cr).title
-    fill_in "Body", with: posts(:cr).body
+    fill_in "Content", with: posts(:cr).body
 
     #When I submit the form
     click_on "Create Post"

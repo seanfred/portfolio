@@ -13,7 +13,7 @@ feature "creating a post" do
      posts_path
      click_on 'New Post'
      fill_in 'Title', with: 'a new hope'
-     fill_in 'Content' with: 'a long time ago in a galaxy far far away'
+     fill_in 'Content', with: 'a long time ago in a galaxy far far away'
 
     # when i submit the form
     click_on 'Create Post'
