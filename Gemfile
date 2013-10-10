@@ -1,21 +1,14 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
-  gem 'sqlite3', 'minitest-rails'
-end
-
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
-end
-
-
-group :test do
-  gem "minitest-rails-capybara"
 end
 
 # Gems used only for assets and not required
@@ -32,27 +25,15 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
-
 gem "minitest-rails"
-gem 'turn'
-gem 'twitter-bootstrap-rails'
-gem 'less-rails-bootstrap'
-gem 'therubyracer'
-gem 'bootstrap-sass'
 
+group :development, :test do
+  gem 'sqlite3'
+  gem "minitest-rails-capybara"
+  gem "minitest-focus"
+  gem "minitest-colorize"
+  gem "capybara-webkit"
+  gem "launchy"
+end
 
-gem 'rails_12factor', group: :production
+gem 'bootstrap-sass-rails'
