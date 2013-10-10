@@ -45,3 +45,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "minitest-rails"
+gem 'turn'
+gem 'twitter-bootstrap-rails'
+gem 'less-rails-bootstrap'
+gem 'therubyracer'
