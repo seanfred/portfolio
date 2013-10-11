@@ -1,7 +1,11 @@
+cf:
+  title: <%= Faker::Name.name %>
+  body: Means striving for excellence
+
+cz:
+  title: <%= Faker::Name.name %>
+  body: It's not a toy anymore
+
 cr:
   title: Code Rails
-  content: This is how I learned web development!
-
-cf:
-  title: Becoming a Code Fellow
-  content: Means striving for excellence.
+  body: This is how I learned web development

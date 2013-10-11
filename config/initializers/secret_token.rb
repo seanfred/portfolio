@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Portfolio::Application.config.secret_token = 'fbf16bc8dd274d8a745eca59a75dfa9bb07130ed3eb8592aa04901ba7ae4b506bf1d98e545d73943c9147bfa2cf43408d58d6de6913960d05904142813fd7af6'
+Portfolio::Application.config.secret_token = 'e3ac5f9e84d07466f835f7c3cb5b70cce10727463804d5a518865aab233bb6fe9ee887c588d978ad04ec5b64a7b173e72ed29116522a5159485135532a051edd'

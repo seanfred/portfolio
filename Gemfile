@@ -11,6 +11,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'bootstrap-sass-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -25,15 +27,38 @@ end
 
 gem 'jquery-rails'
 
-gem "minitest-rails"
-
 group :development, :test do
+  gem "minitest", "> 4.0"
+  gem "minitest-rails"
   gem 'sqlite3'
   gem "minitest-rails-capybara"
   gem "minitest-focus"
   gem "minitest-colorize"
+  gem "minitest-rails"
+  gem "minitest-rails-capybara"
   gem "capybara-webkit"
   gem "launchy"
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "pry-debugger"
+  gem "faker"
 end
 
-gem 'bootstrap-sass-rails'
+group :test do
+  gem "turn"
+end
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger
+# gem 'debugger'
