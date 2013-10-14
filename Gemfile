@@ -26,6 +26,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'gumby-framework'
 
 group :development, :test do
   gem "minitest", "> 4.0"
