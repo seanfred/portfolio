@@ -4,8 +4,7 @@
   ![Logo](URL to logo img file goes here)
 
 -->
-[![Build Status](https://travis-ci.org/seanfred/portfolio.png?)](https://travis-ci.org/seanfred/portfolio)
-
+[![Build Status](https://travis-ci.org/seanfred/portfolio.png?branch=master)](https://travis-ci.org/seanfred/portfolio)
 
 By [Sean Frederick](http://seanfrederick.com).
 
