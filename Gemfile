@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '3.2.14'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,9 +12,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'devise'
 gem 'bootstrap-sass-rails'
-
-gem 'simplecov', :require => false, :group => :test
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,26 +29,23 @@ end
 
 gem 'jquery-rails'
 
-
 group :development, :test do
-  gem "minitest", "> 4.0"
-  gem "minitest-rails"
+  gem 'minitest', '> 4.0'
+  gem 'minitest-rails'
   gem 'sqlite3'
-  gem "minitest-rails-capybara"
-  gem "minitest-focus"
-  gem "minitest-colorize"
-  gem "minitest-rails"
-  gem "minitest-rails-capybara"
-  gem "capybara-webkit"
-  gem "launchy"
-  gem "pry-rails"
-  gem "pry-doc"
-  gem "pry-debugger"
-  gem "faker"
+  gem 'minitest-rails-capybara'
+  gem 'minitest-focus'
+  gem 'minitest-colorize'
+  gem 'capybara-webkit'
+  gem 'launchy'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-debugger'
+  gem 'faker'
 end
 
 group :test do
-  gem "turn"
+  gem 'turn'
 end
 
 # To use ActiveModel has_secure_password

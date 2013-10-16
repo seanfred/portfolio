@@ -1,5 +1,6 @@
 module ApplicationHelper
-# translate the rails flash levels to appropriate twitter bootstrap css classes
+
+  # translate the rails flash levels to appropriate twitter bootstrap css classes
   def flash_class(level)
     case level
       when :notice then "alert alert-info"
