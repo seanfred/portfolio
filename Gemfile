@@ -3,6 +3,11 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.14'
 gem 'devise'
+gem 'pundit'
+gem 'strong_parameters'
+gem 'bootstrap-sass-rails'
+
+gem 'coveralls', require: false
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,10 +17,6 @@ group :production do
   gem 'pg'
 end
 
-gem 'devise'
-gem 'bootstrap-sass-rails'
-
-gem 'simplecov', :require => false, :group => :test
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,6 +32,10 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem "rails-erd"
+end
+
 group :development, :test do
   gem 'minitest', '> 4.0'
   gem 'minitest-rails'
@@ -44,10 +49,12 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-debugger'
   gem 'faker'
+  gem 'railroady'
 end
 
 group :test do
   gem 'turn'
+  gem 'simplecov', require: false
 end
 
 # To use ActiveModel has_secure_password

@@ -15,8 +15,30 @@ feature "Creating a post" do
     # Then a new post should be created and displayed
     page.text.must_include "Post was successfully created"
     page.text.must_include posts(:cr).title
-    page.has_css? "#author"
-    page.text.must_include users(:one).email
+    assert page.has_css? "#author"
+    page.text.must_include "By: #{users(:author).email}"
+  end
+
+  scenario "authors can't publish" do
+    # Given a new author's post
+    sign_in(:author)
+    # When I visit the new page
+    visit new_post_path
+
+    # There is no checkbox for published
+    page.wont_have_field('published')
+  end
+
+  scenario "unauthenticated site vistiors cannot see new post button" do
+    # When I visit the blog index page
+    visit posts_path
+    # Then I should not see the "New Post" button
+    page.wont_have_link "New Post"
+  end
+
+  scenario "unauthenticated site visitors cannot visit new_post_path" do
+    visit new_post_path
+    page.must_have_content "You need to sign in or sign up before continuing"
   end
 
 end
