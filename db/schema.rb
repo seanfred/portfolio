@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131016213704) do
+ActiveRecord::Schema.define(:version => 20131022013425) do
+
+  create_table "comments", :force => true do |t|
+    t.string   "author"
+    t.string   "author_url"
+    t.string   "author_email"
+    t.string   "user_ip"
+    t.string   "user_agent"
+    t.string   "referrer"
+    t.text     "content"
+    t.boolean  "approved"
+    t.integer  "post_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -44,6 +60,8 @@ ActiveRecord::Schema.define(:version => 20131016213704) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "role"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
