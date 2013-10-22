@@ -10,11 +10,12 @@ class User < ActiveRecord::Base
   :password_confirmation,
   :remember_me,
   :role
+  :name
 
   has_many :posts, foreign_key: "author_id"
 
-  validates_presence_of :username
-  validates_uniqueness_of :username
+  #validates_presence_of :username
+  #validates_uniqueness_of :username
 
   def author?
     role == 'author'
