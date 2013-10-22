@@ -1,21 +1,17 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  devise :database_authenticatable, :registerable, :omniauthable,
+         :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email,
-  :password,
-  :password_confirmation,
-  :remember_me,
-  :role
-  :name
+  # attr_accessible :email,
+  #                 :password,
+  #                 :password_confirmation,
+  #                 :remember_me,
+  #                 :role
 
   has_many :posts, foreign_key: "author_id"
-
-  #validates_presence_of :username
-  #validates_uniqueness_of :username
 
   def author?
     role == 'author'
@@ -23,10 +19,6 @@ class User < ActiveRecord::Base
 
   def editor?
     role == 'editor'
-  end
-
-  def commenter?
-    role == 'commenter'
   end
 
   def self.from_omniauth(auth)
