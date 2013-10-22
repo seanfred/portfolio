@@ -1,5 +1,5 @@
 Portfolio::Application.routes.draw do
-  resources :comments
+
 
 
   devise_for :users,
@@ -7,12 +7,13 @@ Portfolio::Application.routes.draw do
                            passwords: "users/passwords",
                            omniauth_callbacks: "omniauth_callbacks"}
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+
   resources :projects
 
   root to: 'home#index'
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

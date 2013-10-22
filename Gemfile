@@ -9,6 +9,7 @@ gem 'bootstrap-sass-rails'
 gem 'omniauth-twitter'
 gem 'figaro'
 
+
 gem 'coveralls', require: false
 
 # Bundle edge Rails instead:
