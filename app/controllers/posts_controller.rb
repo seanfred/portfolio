@@ -6,12 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if current_user
-      @posts = policy_scope(Post)
-    else
-      @posts = Post.where(published: true)
-    end
-
+    @posts = policy_scope(Post)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -21,6 +16,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @commentable = @post
+    @comments = @commentable.comments
     @comment = Comment.new
     respond_to do |format|
       format.html # show.html.erb
@@ -41,6 +38,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    authorize @post
   end
 
   # POST /posts

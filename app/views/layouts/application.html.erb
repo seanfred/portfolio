@@ -43,6 +43,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="about.html">About</a></li>
             <li><%= link_to "Blog", posts_path %></li>
+            <li><%= link_to "Projects", projects_path %></li>
             <% if current_user.present? %>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
             <% else %>

@@ -19,10 +19,13 @@
       <td>
         <%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %>
         <p class="pull-right"><%= "Published" if post.published %></p>
+        <%= button_to 'Publish', post_path(post, post: { published: true }),
+          method: :put, class: "btn btn-default" %>
       </td>
     <% end %>
     <% if policy(post).destroy? %>
-      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
+      <td><%= link_to 'Destroy', post, method: :delete,
+        data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %></td>
     <% end %>
   </tr>
 <% end %>
