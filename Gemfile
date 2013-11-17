@@ -8,6 +8,7 @@ gem 'strong_parameters'
 gem 'bootstrap-sass-rails'
 gem 'omniauth-twitter'
 gem 'figaro'
+gem 'activerecord-mysql-adapter'
 
 
 gem 'coveralls', require: false
