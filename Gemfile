@@ -18,7 +18,9 @@ gem 'coveralls', require: false
 
 group :production do
   gem 'rails_12factor'
-  gem 'mysql'
+  gem 'mysql2'
+  gem 'therubyracer'
+  gem 'aws-sdk'
 end
 
 
