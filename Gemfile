@@ -8,7 +8,7 @@ gem 'strong_parameters'
 gem 'bootstrap-sass-rails'
 gem 'omniauth-twitter'
 gem 'figaro'
-gem 'mysql'
+
 
 
 gem 'coveralls', require: false
@@ -18,7 +18,7 @@ gem 'coveralls', require: false
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
+  gem 'mysql'
 end
 
 
