@@ -8,7 +8,7 @@ gem 'strong_parameters'
 gem 'bootstrap-sass-rails'
 gem 'omniauth-twitter'
 gem 'figaro'
-
+gem 'unicorn'
 
 
 gem 'coveralls', require: false
